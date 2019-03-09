@@ -28,6 +28,22 @@
     로그인을 하시오
 
     {%endif%}
+
+    <h1>썸네일</h1>
+
+    {% for blog in blog.all %}
+
+    <img src="{{blog.image.url}}" width=400>
+    <br>
+    {{blog.text}}
+
+    <br><br>
+    <img src="{{blog.image_thumbnail.url}}">
+
+    {% endfor%}
+    <hr>
+
+    <h1>지도 기능</h1><hr>
     <h3>1. 우리집 지도</h3>
     <div id="map" style="width:400px;height:400px;"></div><br>
     <h3>2. 현 위치</h3>
